@@ -1,5 +1,5 @@
-#ifndef EX00_PHILOSOPHERS_H
-#define EX00_PHILOSOPHERS_H
+#ifndef PHILOSOPHERS_H
+# define PHILOSOPHERS_H
 
 # include <string.h>
 # include <stdio.h>
@@ -11,15 +11,34 @@
 # include <sys/stat.h>
 # include <semaphore.h>
 
-typedef struct s_info
+typedef struct s_input_data
 {
-	int number_of_philosophers;
-	int time_to_die;
-	int time_to_eat;
-	int time_to_sleep;
-	int number_of_times_each_philo_must_eat;
-} t_info;
+	int	number_of_philosophers;
+	int	time_to_die;
+	int	time_to_eat;
+	int	time_to_sleep;
+	int	number_of_times_each_philo_must_eat;
+}	t_input_data;
 
-int	get_and_validate_input_data(int argc, char **argv, t_info *info);
+typedef struct s_philo
+{
+	int			last_dinner;
+	pthread_t 	thread;
+}	t_philo;
+
+typedef struct s_fork
+{
+	pthread_mutex_t	*mutex;
+}	t_fork;
+
+typedef struct s_data
+{
+	t_input_data	input_data;
+	t_philo			*philo;
+	pthread_mutex_t	output;
+	pthread_mutex_t	*fork;
+}	t_data;
+
+int	get_and_validate_input_data(int argc, char **argv, t_input_data *info);
 
 #endif

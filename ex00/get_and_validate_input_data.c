@@ -19,7 +19,7 @@ static int	ft_atoi(const char *str)
 	return ((int)(res) * sign);
 }
 
-int	get_and_validate_input_data(int argc, char **argv, t_info *info)
+int	get_and_validate_input_data(int argc, char **argv, t_input_data *info)
 {
 	if (argc != 5 && argc != 6)
 	{
