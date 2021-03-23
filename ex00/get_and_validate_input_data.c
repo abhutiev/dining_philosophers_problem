@@ -32,9 +32,12 @@ int	get_and_validate_input_data(int argc, char **argv, t_info *info)
 	info->time_to_sleep = ft_atoi(argv[4]);
 	if (argc == 6)
 		info->number_of_times_each_philo_must_eat = ft_atoi(argv[5]);
-	if (info->time_to_sleep <= 0 || info->time_to_eat || info->time_to_die <= 0 ||
-		info->number_of_philosophers <= 0 ||
-		(argc == 6 && info->number_of_times_each_philo_must_eat <= 0))
+	else
+		info->number_of_times_each_philo_must_eat = 0;
+	if (info->time_to_sleep <= 0 || info->time_to_eat <= 0
+		|| info->time_to_die <= 0
+		|| info->number_of_philosophers <= 0
+		|| (argc == 6 && info->number_of_times_each_philo_must_eat <= 0))
 	{
 		write(2, "Incorrect input data\n", 21);
 		return (1);
