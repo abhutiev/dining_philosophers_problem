@@ -22,14 +22,10 @@ typedef struct s_input_data
 
 typedef struct s_philo
 {
-	int			last_dinner;
+	long			last_dinner;
+	long			time_to_die;
 	pthread_t 	thread;
 }	t_philo;
-
-typedef struct s_fork
-{
-	pthread_mutex_t	*mutex;
-}	t_fork;
 
 typedef struct s_data
 {
@@ -40,5 +36,6 @@ typedef struct s_data
 }	t_data;
 
 int	get_and_validate_input_data(int argc, char **argv, t_input_data *info);
+int	create_mutexes(t_data *data);
 
 #endif

@@ -1,7 +1,8 @@
 NAME =	philo_one
 
 SRC =	main.c \
-		get_and_validate_input_data.c
+		get_and_validate_input_data.c \
+		initial_mutex_creation.c \
 
 OBJ =	${SRC:.c=.o}
 
