@@ -3,12 +3,13 @@ NAME =	philo_one
 SRC =	main.c \
 		get_and_validate_input_data.c \
 		initial_mutex_creation.c \
+		time_handling.c
 
 OBJ =	${SRC:.c=.o}
 
 CC		=	gcc
 
-CFLAGS	=	-Wall -Wextra -Werror -g
+CFLAGS	= -Wall -Wextra -Werror
 
 
 all: ${NAME}

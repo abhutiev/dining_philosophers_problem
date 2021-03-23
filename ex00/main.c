@@ -1,8 +1,26 @@
 #include "philosophers.h"
 
-void *philo_hussle(t_data *data)
+int	philo_eat(t_data *data)
 {
-	(void)data;
+
+}
+
+int	philo_sleep(t_data *data)
+{
+
+}
+
+int	philo_thinking(t_data *data)
+{
+
+}
+
+void	*philo_hussle(t_data *data)
+{
+	data->philo->time_to_die = time_to_die_in_ms(data);
+	philo_eat(data);
+	philo_sleep(data);
+	philo_thinking(data);
 	return (NULL);
 }
 
