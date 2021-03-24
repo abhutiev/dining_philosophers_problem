@@ -25,23 +25,8 @@ void	*memento_mori(t_philo *philo)
 			printf("%llu Philosopher %zu died\n", timestamp(), philo->index + 1);
 			pthread_mutex_unlock(&philo->output);
 			return (NULL);
-			//pthread_mutex_unlock()
 		}
 	}
-}
-
-void	philo_took_left_fork(t_philo *philo)
-{
-	pthread_mutex_lock(&philo->output);
-	printf("%llu Philosopher %zu has taken a left fork\n", timestamp(), philo->index + 1);
-	pthread_mutex_unlock(&philo->output);
-}
-
-void	philo_took_right_fork(t_philo *philo)
-{
-	pthread_mutex_lock(&philo->output);
-	printf("%llu Philosopher %zu has taken a right fork\n", timestamp(), philo->index + 1);
-	pthread_mutex_unlock(&philo->output);
 }
 
 void	philo_takes_forks(t_philo *philo)
@@ -67,7 +52,7 @@ void	philo_drops_forks(t_philo *philo)
 	pthread_mutex_lock(&philo->output);
 	printf("%llu Philosopher %zu has dropped a right fork\n", timestamp(), philo->index + 1);
 	pthread_mutex_unlock(&philo->output);
-	philo->consuming = 1;
+	philo->consuming = 0;
 }
 
 void	*philo_hussle(t_philo *philo)
@@ -75,11 +60,9 @@ void	*philo_hussle(t_philo *philo)
 	pthread_t	thread_of_death;
 
 	philo->time_to_die = time_to_die_in_ms(philo->input);
-//	if (pthread_create(&thread_of_death, NULL, (void *)&memento_mori, philo))
-//		return (NULL);
-//	pthread_detach(thread_of_death);
-//	philo->left_fork_index = &philo->fork[philo->index];
-//	philo->right_fork_index = &philo->fork[philo->index == 0 ? philo->input.number_of_philosophers - 1 : philo->index];
+	if (pthread_create(&thread_of_death, NULL, (void *)&memento_mori, philo))
+		return (NULL);
+	pthread_detach(thread_of_death);
 	while (1)
 	{
 		philo_takes_forks(philo);
