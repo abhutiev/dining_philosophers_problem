@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/gdoge/philosophers/philo_one/main.c
+philosophers.h
+/Users/gdoge/philosophers/philo_one/philosophers.h
+
+/Users/gdoge/philosophers/philo_one/philosophers.h
+string.h
+-
+stdio.h
+-
+stdlib.h
+-
+unistd.h
+-
+sys/time.h
+-
+pthread.h
+-
+fcntl.h
+-
+sys/stat.h
+-
+semaphore.h
+-
+

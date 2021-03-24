@@ -5,13 +5,13 @@ static int create_forks_mutex(t_data *data)
 	size_t	i;
 
 	i = 0;
-	data->fork = (pthread_mutex_t *)malloc(sizeof(pthread_mutex_t) * data->input_data.number_of_philosophers);
+	data->fork = (pthread_mutex_t *)malloc(sizeof(pthread_mutex_t) * data->input.number_of_philosophers);
 	if (!data->fork)
 	{
 		write(2, "Something wrong with memory allocation\n", 39);
 		return (1);
 	}
-	while (i < (size_t)data->input_data.number_of_philosophers)
+	while (i < (size_t)data->input.number_of_philosophers)
 	{
 		if (pthread_mutex_init(&data->fork[i], NULL))
 		{
