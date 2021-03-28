@@ -8,42 +8,43 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/Users/gdoge/philosophers/philo_one/cmake-build-debug"/>
+				<Option working_dir="/Users/gdoge/dining_philosophers_problem/philo_one/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j6 -f &quot;/Users/gdoge/philosophers/philo_one/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/gdoge/philosophers/philo_one/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j6 -f &quot;/Users/gdoge/philosophers/philo_one/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/gdoge/philosophers/philo_one/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j6 -f &quot;/Users/gdoge/dining_philosophers_problem/philo_one/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/gdoge/dining_philosophers_problem/philo_one/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/Users/gdoge/dining_philosophers_problem/philo_one/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/gdoge/dining_philosophers_problem/philo_one/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/Users/gdoge/philosophers/philo_one/cmake-build-debug"/>
+				<Option working_dir="/Users/gdoge/dining_philosophers_problem/philo_one/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j6 -f &quot;/Users/gdoge/philosophers/philo_one/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/gdoge/philosophers/philo_one/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j6 -f &quot;/Users/gdoge/philosophers/philo_one/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/gdoge/philosophers/philo_one/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j6 -f &quot;/Users/gdoge/dining_philosophers_problem/philo_one/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/gdoge/dining_philosophers_problem/philo_one/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/Users/gdoge/dining_philosophers_problem/philo_one/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/gdoge/dining_philosophers_problem/philo_one/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/Users/gdoge/philosophers/philo_one/cmake-build-debug"/>
+				<Option working_dir="/Users/gdoge/dining_philosophers_problem/philo_one/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j6 -f &quot;/Users/gdoge/philosophers/philo_one/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/gdoge/philosophers/philo_one/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j6 -f &quot;/Users/gdoge/philosophers/philo_one/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/gdoge/philosophers/philo_one/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j6 -f &quot;/Users/gdoge/dining_philosophers_problem/philo_one/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/gdoge/dining_philosophers_problem/philo_one/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/Users/gdoge/dining_philosophers_problem/philo_one/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/gdoge/dining_philosophers_problem/philo_one/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="philo_one">
-				<Option output="/Users/gdoge/philosophers/philo_one/cmake-build-debug/philo_one" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/gdoge/philosophers/philo_one/cmake-build-debug"/>
+				<Option output="/Users/gdoge/dining_philosophers_problem/philo_one/cmake-build-debug/philo_one" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/gdoge/dining_philosophers_problem/philo_one/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="/Users/gdoge/dining_philosophers_problem/philo_one/."/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.0/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
@@ -51,19 +52,20 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j6 -f &quot;/Users/gdoge/philosophers/philo_one/cmake-build-debug/Makefile&quot;  VERBOSE=1 philo_one"/>
-					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/gdoge/philosophers/philo_one/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j6 -f &quot;/Users/gdoge/philosophers/philo_one/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/gdoge/philosophers/philo_one/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j6 -f &quot;/Users/gdoge/dining_philosophers_problem/philo_one/cmake-build-debug/Makefile&quot;  VERBOSE=1 philo_one"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/gdoge/dining_philosophers_problem/philo_one/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/Users/gdoge/dining_philosophers_problem/philo_one/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/gdoge/dining_philosophers_problem/philo_one/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="philo_one/fast">
-				<Option output="/Users/gdoge/philosophers/philo_one/cmake-build-debug/philo_one" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/gdoge/philosophers/philo_one/cmake-build-debug"/>
+				<Option output="/Users/gdoge/dining_philosophers_problem/philo_one/cmake-build-debug/philo_one" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/gdoge/dining_philosophers_problem/philo_one/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="/Users/gdoge/dining_philosophers_problem/philo_one/."/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.0/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
@@ -71,29 +73,35 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j6 -f &quot;/Users/gdoge/philosophers/philo_one/cmake-build-debug/Makefile&quot;  VERBOSE=1 philo_one/fast"/>
-					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/gdoge/philosophers/philo_one/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j6 -f &quot;/Users/gdoge/philosophers/philo_one/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/gdoge/philosophers/philo_one/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j6 -f &quot;/Users/gdoge/dining_philosophers_problem/philo_one/cmake-build-debug/Makefile&quot;  VERBOSE=1 philo_one/fast"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/gdoge/dining_philosophers_problem/philo_one/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/Users/gdoge/dining_philosophers_problem/philo_one/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/gdoge/dining_philosophers_problem/philo_one/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/gdoge/philosophers/philo_one/get_and_validate_input_data.c">
+		<Unit filename="/Users/gdoge/dining_philosophers_problem/philo_one/get_input.c">
 			<Option target="philo_one"/>
 		</Unit>
-		<Unit filename="/Users/gdoge/philosophers/philo_one/initial_mutex_creation.c">
+		<Unit filename="/Users/gdoge/dining_philosophers_problem/philo_one/main.c">
 			<Option target="philo_one"/>
 		</Unit>
-		<Unit filename="/Users/gdoge/philosophers/philo_one/main.c">
+		<Unit filename="/Users/gdoge/dining_philosophers_problem/philo_one/mutexes.c">
 			<Option target="philo_one"/>
 		</Unit>
-		<Unit filename="/Users/gdoge/philosophers/philo_one/passing_time_mutex_creation.c">
+		<Unit filename="/Users/gdoge/dining_philosophers_problem/philo_one/philo_life.c">
 			<Option target="philo_one"/>
 		</Unit>
-		<Unit filename="/Users/gdoge/philosophers/philo_one/time_handling.c">
+		<Unit filename="/Users/gdoge/dining_philosophers_problem/philo_one/philosophers.h">
 			<Option target="philo_one"/>
 		</Unit>
-		<Unit filename="/Users/gdoge/philosophers/philo_one/CMakeLists.txt">
+		<Unit filename="/Users/gdoge/dining_philosophers_problem/philo_one/philosophers_life.c">
+			<Option target="philo_one"/>
+		</Unit>
+		<Unit filename="/Users/gdoge/dining_philosophers_problem/philo_one/time.c">
+			<Option target="philo_one"/>
+		</Unit>
+		<Unit filename="/Users/gdoge/dining_philosophers_problem/philo_one/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

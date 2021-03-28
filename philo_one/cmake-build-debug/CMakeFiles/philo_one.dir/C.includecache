@@ -6,11 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/Users/gdoge/philosophers/philo_one/main.c
-philosophers.h
-/Users/gdoge/philosophers/philo_one/philosophers.h
-
-/Users/gdoge/philosophers/philo_one/philosophers.h
+/Users/gdoge/dining_philosophers_problem/philo_one/philosophers.h
 string.h
 -
 stdio.h
@@ -27,6 +23,8 @@ fcntl.h
 -
 sys/stat.h
 -
-semaphore.h
--
+
+/Users/gdoge/dining_philosophers_problem/philo_one/philosophers_life.c
+philosophers.h
+/Users/gdoge/dining_philosophers_problem/philo_one/philosophers.h
 

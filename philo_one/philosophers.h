@@ -9,56 +9,52 @@
 # include <pthread.h>
 # include <fcntl.h>
 # include <sys/stat.h>
-# include <semaphore.h>
 
 typedef unsigned long long time_ms;
 
-typedef struct s_input
+typedef struct	s_input
 {
 	int				number_of_philosophers;
 	int				time_to_die;
 	int				time_to_eat;
 	int				time_to_sleep;
 	int				number_of_times_each_philo_must_eat;
-	time_ms			time_of_start;
 }	t_input;
 
-struct s_data;
-
-typedef struct s_philo
+typedef struct	s_mutexes
 {
-	size_t			index;
-	time_ms			last_dinner;
-	time_ms			time_to_die;
-	size_t			left_fork_index;
-	size_t			right_fork_index;
-	pthread_t 		thread;
-	t_input			input;
-	pthread_mutex_t	output;
-	pthread_mutex_t	*death;
+	pthread_mutex_t	*stop;
+	pthread_mutex_t	*print;
 	pthread_mutex_t	*fork;
-	int				number;
-	int				consuming;
+	pthread_mutex_t *etiquette;
+}	t_mutexes;
+
+typedef struct	s_philo
+{
+	pthread_t	thread;
+	t_mutexes	*mutex;
+	t_input		info;
+	time_ms		*start_of_simulation;
+	time_ms		time_of_death;
+	int			index_left_fork;
+	int			index_right_fork;
+	int			index;
 }	t_philo;
 
-typedef struct s_data
+typedef struct	s_data
 {
-	t_input			info;
-	t_philo			*philo;
-	pthread_mutex_t	output;
-	pthread_mutex_t	*fork;
-	pthread_mutex_t death;
+	t_input		input;
+	t_mutexes	*mutex;
+	t_philo		*philo;
+	time_ms		*start_of_simulation;
 }	t_data;
 
-int		get_and_validate_input_data(int argc, char **argv, t_input *info);
-int		create_mutexes(t_data *data);
-time_ms time_to_die_in_ms(t_input input);
-time_ms timestamp(void);
+int	get_input(int argc, char **argv, t_input *data);
+int	create_mutexes(t_data *data);
+void	set_start_time(t_data *data);
+void	set_first_time_of_death(t_philo *philo);
+void	set_time_of_death(t_philo *philo);
+time_ms	get_current_time(void);
 void	*philo_hussle(t_philo *philo);
-void	philo_drops_forks(t_philo *philo);
-void	philo_takes_forks(t_philo *philo);
-void	almost_real_usleep(time_ms time_to_sleep);
 
-
-//time_ms
 #endif

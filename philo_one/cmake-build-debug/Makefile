@@ -68,10 +68,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/gdoge/philosophers/philo_one
+CMAKE_SOURCE_DIR = /Users/gdoge/dining_philosophers_problem/philo_one
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/gdoge/philosophers/philo_one/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/gdoge/dining_philosophers_problem/philo_one/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -100,9 +100,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/gdoge/philosophers/philo_one/cmake-build-debug/CMakeFiles /Users/gdoge/philosophers/philo_one/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/gdoge/dining_philosophers_problem/philo_one/cmake-build-debug/CMakeFiles /Users/gdoge/dining_philosophers_problem/philo_one/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/gdoge/philosophers/philo_one/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/gdoge/dining_philosophers_problem/philo_one/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -143,59 +143,32 @@ philo_one/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_one.dir/build.make CMakeFiles/philo_one.dir/build
 .PHONY : philo_one/fast
 
-get_and_validate_input_data.o: get_and_validate_input_data.c.o
+get_input.o: get_input.c.o
 
-.PHONY : get_and_validate_input_data.o
-
-# target to build an object file
-get_and_validate_input_data.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_one.dir/build.make CMakeFiles/philo_one.dir/get_and_validate_input_data.c.o
-.PHONY : get_and_validate_input_data.c.o
-
-get_and_validate_input_data.i: get_and_validate_input_data.c.i
-
-.PHONY : get_and_validate_input_data.i
-
-# target to preprocess a source file
-get_and_validate_input_data.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_one.dir/build.make CMakeFiles/philo_one.dir/get_and_validate_input_data.c.i
-.PHONY : get_and_validate_input_data.c.i
-
-get_and_validate_input_data.s: get_and_validate_input_data.c.s
-
-.PHONY : get_and_validate_input_data.s
-
-# target to generate assembly for a file
-get_and_validate_input_data.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_one.dir/build.make CMakeFiles/philo_one.dir/get_and_validate_input_data.c.s
-.PHONY : get_and_validate_input_data.c.s
-
-initial_mutex_creation.o: initial_mutex_creation.c.o
-
-.PHONY : initial_mutex_creation.o
+.PHONY : get_input.o
 
 # target to build an object file
-initial_mutex_creation.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_one.dir/build.make CMakeFiles/philo_one.dir/initial_mutex_creation.c.o
-.PHONY : initial_mutex_creation.c.o
+get_input.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_one.dir/build.make CMakeFiles/philo_one.dir/get_input.c.o
+.PHONY : get_input.c.o
 
-initial_mutex_creation.i: initial_mutex_creation.c.i
+get_input.i: get_input.c.i
 
-.PHONY : initial_mutex_creation.i
+.PHONY : get_input.i
 
 # target to preprocess a source file
-initial_mutex_creation.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_one.dir/build.make CMakeFiles/philo_one.dir/initial_mutex_creation.c.i
-.PHONY : initial_mutex_creation.c.i
+get_input.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_one.dir/build.make CMakeFiles/philo_one.dir/get_input.c.i
+.PHONY : get_input.c.i
 
-initial_mutex_creation.s: initial_mutex_creation.c.s
+get_input.s: get_input.c.s
 
-.PHONY : initial_mutex_creation.s
+.PHONY : get_input.s
 
 # target to generate assembly for a file
-initial_mutex_creation.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_one.dir/build.make CMakeFiles/philo_one.dir/initial_mutex_creation.c.s
-.PHONY : initial_mutex_creation.c.s
+get_input.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_one.dir/build.make CMakeFiles/philo_one.dir/get_input.c.s
+.PHONY : get_input.c.s
 
 main.o: main.c.o
 
@@ -224,59 +197,113 @@ main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_one.dir/build.make CMakeFiles/philo_one.dir/main.c.s
 .PHONY : main.c.s
 
-passing_time_mutex_creation.o: passing_time_mutex_creation.c.o
+mutexes.o: mutexes.c.o
 
-.PHONY : passing_time_mutex_creation.o
-
-# target to build an object file
-passing_time_mutex_creation.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_one.dir/build.make CMakeFiles/philo_one.dir/passing_time_mutex_creation.c.o
-.PHONY : passing_time_mutex_creation.c.o
-
-passing_time_mutex_creation.i: passing_time_mutex_creation.c.i
-
-.PHONY : passing_time_mutex_creation.i
-
-# target to preprocess a source file
-passing_time_mutex_creation.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_one.dir/build.make CMakeFiles/philo_one.dir/passing_time_mutex_creation.c.i
-.PHONY : passing_time_mutex_creation.c.i
-
-passing_time_mutex_creation.s: passing_time_mutex_creation.c.s
-
-.PHONY : passing_time_mutex_creation.s
-
-# target to generate assembly for a file
-passing_time_mutex_creation.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_one.dir/build.make CMakeFiles/philo_one.dir/passing_time_mutex_creation.c.s
-.PHONY : passing_time_mutex_creation.c.s
-
-time_handling.o: time_handling.c.o
-
-.PHONY : time_handling.o
+.PHONY : mutexes.o
 
 # target to build an object file
-time_handling.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_one.dir/build.make CMakeFiles/philo_one.dir/time_handling.c.o
-.PHONY : time_handling.c.o
+mutexes.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_one.dir/build.make CMakeFiles/philo_one.dir/mutexes.c.o
+.PHONY : mutexes.c.o
 
-time_handling.i: time_handling.c.i
+mutexes.i: mutexes.c.i
 
-.PHONY : time_handling.i
+.PHONY : mutexes.i
 
 # target to preprocess a source file
-time_handling.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_one.dir/build.make CMakeFiles/philo_one.dir/time_handling.c.i
-.PHONY : time_handling.c.i
+mutexes.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_one.dir/build.make CMakeFiles/philo_one.dir/mutexes.c.i
+.PHONY : mutexes.c.i
 
-time_handling.s: time_handling.c.s
+mutexes.s: mutexes.c.s
 
-.PHONY : time_handling.s
+.PHONY : mutexes.s
 
 # target to generate assembly for a file
-time_handling.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_one.dir/build.make CMakeFiles/philo_one.dir/time_handling.c.s
-.PHONY : time_handling.c.s
+mutexes.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_one.dir/build.make CMakeFiles/philo_one.dir/mutexes.c.s
+.PHONY : mutexes.c.s
+
+philo_life.o: philo_life.c.o
+
+.PHONY : philo_life.o
+
+# target to build an object file
+philo_life.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_one.dir/build.make CMakeFiles/philo_one.dir/philo_life.c.o
+.PHONY : philo_life.c.o
+
+philo_life.i: philo_life.c.i
+
+.PHONY : philo_life.i
+
+# target to preprocess a source file
+philo_life.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_one.dir/build.make CMakeFiles/philo_one.dir/philo_life.c.i
+.PHONY : philo_life.c.i
+
+philo_life.s: philo_life.c.s
+
+.PHONY : philo_life.s
+
+# target to generate assembly for a file
+philo_life.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_one.dir/build.make CMakeFiles/philo_one.dir/philo_life.c.s
+.PHONY : philo_life.c.s
+
+philosophers_life.o: philosophers_life.c.o
+
+.PHONY : philosophers_life.o
+
+# target to build an object file
+philosophers_life.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_one.dir/build.make CMakeFiles/philo_one.dir/philosophers_life.c.o
+.PHONY : philosophers_life.c.o
+
+philosophers_life.i: philosophers_life.c.i
+
+.PHONY : philosophers_life.i
+
+# target to preprocess a source file
+philosophers_life.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_one.dir/build.make CMakeFiles/philo_one.dir/philosophers_life.c.i
+.PHONY : philosophers_life.c.i
+
+philosophers_life.s: philosophers_life.c.s
+
+.PHONY : philosophers_life.s
+
+# target to generate assembly for a file
+philosophers_life.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_one.dir/build.make CMakeFiles/philo_one.dir/philosophers_life.c.s
+.PHONY : philosophers_life.c.s
+
+time.o: time.c.o
+
+.PHONY : time.o
+
+# target to build an object file
+time.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_one.dir/build.make CMakeFiles/philo_one.dir/time.c.o
+.PHONY : time.c.o
+
+time.i: time.c.i
+
+.PHONY : time.i
+
+# target to preprocess a source file
+time.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_one.dir/build.make CMakeFiles/philo_one.dir/time.c.i
+.PHONY : time.c.i
+
+time.s: time.c.s
+
+.PHONY : time.s
+
+# target to generate assembly for a file
+time.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_one.dir/build.make CMakeFiles/philo_one.dir/time.c.s
+.PHONY : time.c.s
 
 # Help Target
 help:
@@ -287,21 +314,24 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... philo_one"
-	@echo "... get_and_validate_input_data.o"
-	@echo "... get_and_validate_input_data.i"
-	@echo "... get_and_validate_input_data.s"
-	@echo "... initial_mutex_creation.o"
-	@echo "... initial_mutex_creation.i"
-	@echo "... initial_mutex_creation.s"
+	@echo "... get_input.o"
+	@echo "... get_input.i"
+	@echo "... get_input.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... passing_time_mutex_creation.o"
-	@echo "... passing_time_mutex_creation.i"
-	@echo "... passing_time_mutex_creation.s"
-	@echo "... time_handling.o"
-	@echo "... time_handling.i"
-	@echo "... time_handling.s"
+	@echo "... mutexes.o"
+	@echo "... mutexes.i"
+	@echo "... mutexes.s"
+	@echo "... philo_life.o"
+	@echo "... philo_life.i"
+	@echo "... philo_life.s"
+	@echo "... philosophers_life.o"
+	@echo "... philosophers_life.i"
+	@echo "... philosophers_life.s"
+	@echo "... time.o"
+	@echo "... time.i"
+	@echo "... time.s"
 .PHONY : help
 
 

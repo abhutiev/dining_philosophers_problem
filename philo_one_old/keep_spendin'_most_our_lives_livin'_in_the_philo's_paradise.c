@@ -5,6 +5,7 @@ static void	philo_eat(t_philo *philo)
 	philo_takes_forks(philo);
 	almost_real_usleep(philo->input.time_to_eat);
 	philo_drops_forks(philo);
+	philo->time_to_die = timestamp() + philo->input.time_to_die;
 }
 
 static void	philo_sleep(t_philo *philo)
@@ -26,11 +27,11 @@ void	*memento_mori(t_philo *philo)
 {
 	while (1)
 	{
-		if (timestamp() > philo->time_to_die && !philo->consuming)
+		if (timestamp() > philo->time_to_die)
 		{
 			pthread_mutex_lock(&philo->output);
 			printf("%llu Philosopher %zu died\n", timestamp() - philo->input.time_of_start, philo->index + 1);
-			pthread_mutex_unlock(&(*philo->death));
+			pthread_mutex_unlock(philo->death);
 			usleep(2);
 			return (NULL);
 		}
@@ -44,7 +45,7 @@ void	*philo_hussle(t_philo *philo)
 	philo->time_to_die = time_to_die_in_ms(philo->input);
 	if (pthread_create(&thread_of_death, NULL, (void *)&memento_mori, philo))
 		return (NULL);
-//	pthread_detach(thread_of_death);
+	pthread_detach(thread_of_death);
 	while (1)
 	{
 		philo_eat(philo);

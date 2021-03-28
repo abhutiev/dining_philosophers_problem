@@ -1,9 +1,10 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/philo_one.dir/get_and_validate_input_data.c.o"
-  "CMakeFiles/philo_one.dir/initial_mutex_creation.c.o"
+  "CMakeFiles/philo_one.dir/get_input.c.o"
   "CMakeFiles/philo_one.dir/main.c.o"
-  "CMakeFiles/philo_one.dir/passing_time_mutex_creation.c.o"
-  "CMakeFiles/philo_one.dir/time_handling.c.o"
+  "CMakeFiles/philo_one.dir/mutexes.c.o"
+  "CMakeFiles/philo_one.dir/philo_life.c.o"
+  "CMakeFiles/philo_one.dir/philosophers_life.c.o"
+  "CMakeFiles/philo_one.dir/time.c.o"
   "philo_one"
   "philo_one.pdb"
 )

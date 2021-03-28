@@ -4,16 +4,18 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/Users/gdoge/philosophers/philo_one/get_and_validate_input_data.c" "/Users/gdoge/philosophers/philo_one/cmake-build-debug/CMakeFiles/philo_one.dir/get_and_validate_input_data.c.o"
-  "/Users/gdoge/philosophers/philo_one/initial_mutex_creation.c" "/Users/gdoge/philosophers/philo_one/cmake-build-debug/CMakeFiles/philo_one.dir/initial_mutex_creation.c.o"
-  "/Users/gdoge/philosophers/philo_one/main.c" "/Users/gdoge/philosophers/philo_one/cmake-build-debug/CMakeFiles/philo_one.dir/main.c.o"
-  "/Users/gdoge/philosophers/philo_one/passing_time_mutex_creation.c" "/Users/gdoge/philosophers/philo_one/cmake-build-debug/CMakeFiles/philo_one.dir/passing_time_mutex_creation.c.o"
-  "/Users/gdoge/philosophers/philo_one/time_handling.c" "/Users/gdoge/philosophers/philo_one/cmake-build-debug/CMakeFiles/philo_one.dir/time_handling.c.o"
+  "/Users/gdoge/dining_philosophers_problem/philo_one/get_input.c" "/Users/gdoge/dining_philosophers_problem/philo_one/cmake-build-debug/CMakeFiles/philo_one.dir/get_input.c.o"
+  "/Users/gdoge/dining_philosophers_problem/philo_one/main.c" "/Users/gdoge/dining_philosophers_problem/philo_one/cmake-build-debug/CMakeFiles/philo_one.dir/main.c.o"
+  "/Users/gdoge/dining_philosophers_problem/philo_one/mutexes.c" "/Users/gdoge/dining_philosophers_problem/philo_one/cmake-build-debug/CMakeFiles/philo_one.dir/mutexes.c.o"
+  "/Users/gdoge/dining_philosophers_problem/philo_one/philo_life.c" "/Users/gdoge/dining_philosophers_problem/philo_one/cmake-build-debug/CMakeFiles/philo_one.dir/philo_life.c.o"
+  "/Users/gdoge/dining_philosophers_problem/philo_one/philosophers_life.c" "/Users/gdoge/dining_philosophers_problem/philo_one/cmake-build-debug/CMakeFiles/philo_one.dir/philosophers_life.c.o"
+  "/Users/gdoge/dining_philosophers_problem/philo_one/time.c" "/Users/gdoge/dining_philosophers_problem/philo_one/cmake-build-debug/CMakeFiles/philo_one.dir/time.c.o"
   )
 set(CMAKE_C_COMPILER_ID "AppleClang")
 
 # The include file search paths:
 set(CMAKE_C_TARGET_INCLUDE_PATH
+  "../."
   )
 
 # Targets to which this target links.
