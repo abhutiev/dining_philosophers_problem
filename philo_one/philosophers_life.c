@@ -22,15 +22,26 @@ void	philo_takes_forks(t_philo *philo)
 	}
 }
 
+void	philo_drops_forks(t_philo *philo)
+{
+	pthread_mutex_lock(philo->mutex->print);
+	printf("%llu Philosopher %d has dropped a left fork\n", get_current_time() - *philo->start_of_simulation, philo->index + 1);
+	pthread_mutex_unlock(philo->mutex->print);
+	pthread_mutex_unlock(&philo->mutex->fork[philo->index_left_fork]);
+	pthread_mutex_lock(philo->mutex->print);
+	printf("%llu Philosopher %d has taken a right fork\n", get_current_time() - *philo->start_of_simulation, philo->index + 1);
+	pthread_mutex_unlock(philo->mutex->print);
+	pthread_mutex_unlock(&philo->mutex->fork[philo->index_right_fork]);
+}
+
 void	philo_eats(t_philo *philo)
 {
 	philo_takes_forks(philo);
 	pthread_mutex_lock(philo->mutex->print);
 	printf("%llu Philosopher %d eating\n", get_current_time() - *philo->start_of_simulation, philo->index + 1);
 	pthread_mutex_unlock(philo->mutex->print);
+	philo_drops_forks(philo);
 	usleep(philo->info.time_to_eat * 1000);
-	pthread_mutex_unlock(&philo->mutex->fork[philo->index_left_fork]);
-	pthread_mutex_unlock(&philo->mutex->fork[philo->index_right_fork]);
 	set_time_of_death(philo);
 }
 
@@ -60,7 +71,7 @@ void	*memento_mori(t_philo *philo)
 			pthread_mutex_unlock(philo->mutex->stop);
 			return (NULL);
 		}
-		usleep(1);
+		usleep(10);
 	}
 }
 
