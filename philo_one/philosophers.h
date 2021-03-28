@@ -20,6 +20,7 @@ typedef struct s_input
 	int				time_to_eat;
 	int				time_to_sleep;
 	int				number_of_times_each_philo_must_eat;
+	time_ms			time_of_start;
 }	t_input;
 
 typedef struct s_philo
@@ -27,8 +28,8 @@ typedef struct s_philo
 	size_t			index;
 	time_ms			last_dinner;
 	time_ms			time_to_die;
-	size_t	left_fork_index;
-	size_t right_fork_index;
+	size_t			left_fork_index;
+	size_t			right_fork_index;
 	pthread_t 		thread;
 	t_input			input;
 	pthread_mutex_t	output;
@@ -39,7 +40,7 @@ typedef struct s_philo
 
 typedef struct s_data
 {
-	t_input			input;
+	t_input			info;
 	t_philo			*philo;
 	pthread_mutex_t	output;
 	pthread_mutex_t	*fork;

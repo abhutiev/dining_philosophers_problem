@@ -39,7 +39,7 @@ int	get_and_validate_input_data(int argc, char **argv, t_input *info)
 		|| info->number_of_philosophers <= 0
 		|| (argc == 6 && info->number_of_times_each_philo_must_eat <= 0))
 	{
-		write(2, "Incorrect input data\n", 21);
+		write(2, "Incorrect info data\n", 21);
 		return (1);
 	}
 	return (0);
