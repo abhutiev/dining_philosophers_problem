@@ -33,11 +33,23 @@ static int	create_output_mutex(t_data *data)
 	return (0);
 }
 
+static int	create_death_mutex(t_data *data)
+{
+	if (pthread_mutex_init(&data->death, NULL))
+	{
+		write(2, "Something wrong with mutex creation\n", 36);
+		return (1);
+	}
+	return (0);
+}
+
 int	create_mutexes(t_data *data)
 {
 	if (create_forks_mutex(data))
 		return (1);
 	if (create_output_mutex(data))
+		return (1);
+	if (create_death_mutex(data))
 		return (1);
 	return (0);
 }

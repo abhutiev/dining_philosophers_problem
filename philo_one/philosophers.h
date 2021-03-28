@@ -23,6 +23,8 @@ typedef struct s_input
 	time_ms			time_of_start;
 }	t_input;
 
+struct s_data;
+
 typedef struct s_philo
 {
 	size_t			index;
@@ -33,6 +35,7 @@ typedef struct s_philo
 	pthread_t 		thread;
 	t_input			input;
 	pthread_mutex_t	output;
+	pthread_mutex_t	*death;
 	pthread_mutex_t	*fork;
 	int				number;
 	int				consuming;
@@ -44,12 +47,18 @@ typedef struct s_data
 	t_philo			*philo;
 	pthread_mutex_t	output;
 	pthread_mutex_t	*fork;
+	pthread_mutex_t death;
 }	t_data;
 
 int		get_and_validate_input_data(int argc, char **argv, t_input *info);
 int		create_mutexes(t_data *data);
 time_ms time_to_die_in_ms(t_input input);
 time_ms timestamp(void);
+void	*philo_hussle(t_philo *philo);
+void	philo_drops_forks(t_philo *philo);
+void	philo_takes_forks(t_philo *philo);
+void	almost_real_usleep(time_ms time_to_sleep);
+
 
 //time_ms
 #endif
