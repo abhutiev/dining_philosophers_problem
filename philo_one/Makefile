@@ -3,8 +3,10 @@ NAME =	philo_one
 SRC =	philo_one.c \
 		get_input.c \
 		mutexes.c \
-		philosophers_life.c \
+		keep_spendin_most_our_lives_livin_in_the_philos_paradise.c \
+		philo_creation.c \
 		printing.c \
+		satiety.c \
 		time.c \
 		utils.c
 

@@ -1,5 +1,16 @@
 #include "philosophers.h"
 
+int	ft_strlen(char *s)
+{
+	int i;
+
+	i = 0;
+	while (s[i])
+		i++;
+	return (i);
+}
+
+
 static size_t	len_str_to_prepare(time_ms n)
 {
 	size_t			counter;
