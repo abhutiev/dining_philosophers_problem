@@ -12,4 +12,6 @@ add_executable(philo_one
 		philo_life.c
 		time.c
 		philosophers_life.c
-		philosophers.h)
+		philosophers.h
+		printing.c
+		utils.c)
