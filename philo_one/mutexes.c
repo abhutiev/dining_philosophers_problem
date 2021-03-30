@@ -61,19 +61,6 @@ static pthread_mutex_t *create_etiquette_mutex(void)
 	return (etiquette);
 }
 
-static	pthread_mutex_t *create_satiety_mutex(void)
-{
-	pthread_mutex_t *satiety;
-
-	satiety = (pthread_mutex_t *)malloc(sizeof(pthread_mutex_t));
-	if (!satiety || pthread_mutex_init(satiety, NULL))
-	{
-		write(2, "Something wrong with mutex creation\n", 36);
-		return (NULL);
-	}
-	return (satiety);
-}
-
 int	create_mutexes(t_data *data)
 {
 	data->mutex = (t_mutexes *)malloc(sizeof(t_mutexes));
@@ -88,9 +75,6 @@ int	create_mutexes(t_data *data)
 		return (1);
 	data->mutex->etiquette = create_etiquette_mutex();
 	if (!data->mutex->etiquette)
-		return (1);
-	data->mutex->satiety = create_satiety_mutex();
-	if (!data->mutex->satiety)
 		return (1);
 	return (0);
 }

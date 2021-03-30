@@ -29,9 +29,7 @@ void	philo_eats(t_philo *philo)
 	print_eating_message(philo);
 	set_time_of_death(philo);
 	better_usleep(philo->info.time_to_eat);
-//	pthread_mutex_lock(philo->mutex->satiety);
-//	*(philo->number_of_dinners)++;
-//	pthread_mutex_unlock(philo->mutex->satiety);
+	philo->number_of_dinners[philo->index]++;
 	philo_drops_forks(philo);
 }
 
@@ -57,14 +55,7 @@ void	*memento_mori(t_philo *philo)
 			print_death_meassage(philo);
 			return (NULL);
 		}
-		if (philo->info.number_of_times_each_philo_must_eat && *(philo->number_of_dinners) > philo->info.number_of_times_each_philo_must_eat)
-		{
-			pthread_mutex_lock(philo->mutex->print);
-			printf("%llu Philosophers fed up\n", get_current_time() - *philo->start_of_simulation);
-			pthread_mutex_unlock(philo->mutex->stop);
-			return (NULL);
-		}
-		better_usleep(1);
+		better_usleep(100);
 	}
 }
 

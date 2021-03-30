@@ -27,7 +27,6 @@ typedef struct	s_mutexes
 	pthread_mutex_t	*print;
 	pthread_mutex_t	**fork;
 	pthread_mutex_t *etiquette;
-	pthread_mutex_t *satiety;
 }	t_mutexes;
 
 typedef struct	s_philo
