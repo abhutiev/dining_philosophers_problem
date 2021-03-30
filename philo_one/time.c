@@ -26,5 +26,14 @@ void	set_time_of_death(t_philo *philo)
 	struct timeval	time;
 
 	gettimeofday(&time, NULL);
-	philo->time_of_death = (time_ms)(time.tv_sec * 1000 + time.tv_usec / 1000) + philo->info.time_to_die;
+	philo->time_of_death = (time_ms)(time.tv_sec * 1000 + time.tv_usec / 1000) + philo->info.time_to_die + philo->info.time_to_sleep;
+}
+
+void	better_usleep(time_ms time_to_sleep)
+{
+	time_ms	stop;
+
+	stop = get_current_time() + time_to_sleep;
+	while (get_current_time() < stop)
+		usleep (1);
 }

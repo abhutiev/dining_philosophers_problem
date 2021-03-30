@@ -1,10 +1,10 @@
 #include "philosophers.h"
 
-static pthread_mutex_t *create_forks_mutex(int number_of_philosophers)
+static pthread_mutex_t **create_forks_mutex(int number_of_philosophers)
 {
-	pthread_mutex_t	*forks;
+	pthread_mutex_t	**forks;
 
-	forks = (pthread_mutex_t *)malloc(sizeof(pthread_mutex_t) * number_of_philosophers);
+	forks = (pthread_mutex_t **)malloc(sizeof(pthread_mutex_t *) * number_of_philosophers);
 	if (!forks)
 	{
 		write(2, "Something wrong with memory allocation\n", 39);
@@ -12,7 +12,8 @@ static pthread_mutex_t *create_forks_mutex(int number_of_philosophers)
 	}
 	for (int i = 0; i < number_of_philosophers; i++)
 	{
-		if (pthread_mutex_init(&forks[i], NULL))
+		forks[i] = (pthread_mutex_t *)malloc(sizeof(pthread_mutex_t));
+		if (pthread_mutex_init(forks[i], NULL))
 		{
 			write(2, "Something wrong with mutex creation\n", 36);
 			return (NULL);
@@ -60,6 +61,19 @@ static pthread_mutex_t *create_etiquette_mutex(void)
 	return (etiquette);
 }
 
+static	pthread_mutex_t *create_satiety_mutex(void)
+{
+	pthread_mutex_t *satiety;
+
+	satiety = (pthread_mutex_t *)malloc(sizeof(pthread_mutex_t));
+	if (!satiety || pthread_mutex_init(satiety, NULL))
+	{
+		write(2, "Something wrong with mutex creation\n", 36);
+		return (NULL);
+	}
+	return (satiety);
+}
+
 int	create_mutexes(t_data *data)
 {
 	data->mutex = (t_mutexes *)malloc(sizeof(t_mutexes));
@@ -74,6 +88,9 @@ int	create_mutexes(t_data *data)
 		return (1);
 	data->mutex->etiquette = create_etiquette_mutex();
 	if (!data->mutex->etiquette)
+		return (1);
+	data->mutex->satiety = create_satiety_mutex();
+	if (!data->mutex->satiety)
 		return (1);
 	return (0);
 }

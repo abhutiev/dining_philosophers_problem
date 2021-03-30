@@ -25,8 +25,9 @@ typedef struct	s_mutexes
 {
 	pthread_mutex_t	*stop;
 	pthread_mutex_t	*print;
-	pthread_mutex_t	*fork;
+	pthread_mutex_t	**fork;
 	pthread_mutex_t *etiquette;
+	pthread_mutex_t *satiety;
 }	t_mutexes;
 
 typedef struct	s_philo
@@ -39,6 +40,7 @@ typedef struct	s_philo
 	int			index_left_fork;
 	int			index_right_fork;
 	int			index;
+	int			*number_of_dinners;
 }	t_philo;
 
 typedef struct	s_data
@@ -47,6 +49,7 @@ typedef struct	s_data
 	t_mutexes	*mutex;
 	t_philo		*philo;
 	time_ms		*start_of_simulation;
+	int			*number_of_dinners;
 }	t_data;
 
 int	get_input(int argc, char **argv, t_input *data);
@@ -56,5 +59,6 @@ void	set_first_time_of_death(t_philo *philo);
 void	set_time_of_death(t_philo *philo);
 time_ms	get_current_time(void);
 void	*philo_hussle(t_philo *philo);
+void	better_usleep(time_ms time_to_sleep);
 
 #endif
