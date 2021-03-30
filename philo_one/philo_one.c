@@ -59,7 +59,7 @@ int	create_philosophers(t_data *data)
 		pthread_detach(philo[i].thread);
 	}
 	set_start_time(data);
-	if (data->input.number_of_philosophers)
+	if (data->input.number_of_times_each_philo_must_eat)
 	{
 		if (pthread_create(&gluttony, NULL, (void *)&satiety, data))
 		{
