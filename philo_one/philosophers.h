@@ -1,14 +1,11 @@
 #ifndef PHILOSOPHERS_H
 # define PHILOSOPHERS_H
 
-# include <string.h>
 # include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
 # include <sys/time.h>
 # include <pthread.h>
-# include <fcntl.h>
-# include <sys/stat.h>
 
 # define RIGHT_FORK 1
 # define LEFT_FORK 2
