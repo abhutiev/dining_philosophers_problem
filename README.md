@@ -38,7 +38,7 @@ It was originally formulated in 1965 by Edsger Dijkstra as a student exam exerci
   
 # Non-common rules for cases
 
-# philo_one
+# philo_one. Using mutexes
 
 In this version the non common rules will be:
 
@@ -50,7 +50,7 @@ mutex for each of them.
 
 • Each philosopher should be a thread.
 
-# philo_two
+# philo_two. Using semaphores.
 
 In this version the non common rules will be:
 
@@ -61,7 +61,7 @@ a semaphore.
 
 • Each philosopher should be a thread.
 
-# philo_three
+# philo_three.
 
 In this version the non common rules will be:
 
