@@ -1,0 +1,17 @@
+philo_one/cmake-build-debug
+philo_one/*.o
+philo_one/.DS_Store
+philo_one/.idea/
+philo_one/philo_one
+philo_two/philo_two
+philo_two/cmake-build-debug
+philo_two/*.o
+philo_two/.DS_Store
+philo_two/.idea/
+philo_three/cmake-build-debug
+philo_three/*.o
+philo_three/.DS_Store
+philo_three/.idea/
+philo_three/philo_three
+.DS_Store
+.idea
