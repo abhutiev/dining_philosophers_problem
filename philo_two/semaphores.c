@@ -4,7 +4,7 @@ static int	create_forks_semaphore(t_data *data)
 {
 	sem_unlink("/forks");
 	data->semaphores->forks = sem_open("/forks", O_CREAT, 644, data->input.number_of_philosophers);
-	if (data->semaphores->forks == (sem_t *)-1)
+	if (data->semaphores->forks == SEM_FAILED)
 	{
 		write(1, "Something wrong with semaphore creation\n", 40);
 		return (1);
@@ -16,7 +16,7 @@ static int	create_print_semaphore(t_data *data)
 {
 	sem_unlink("/print");
 	data->semaphores->print = sem_open("/print", O_CREAT, 644, 1);
-	if (data->semaphores->print == (sem_t *)-1)
+	if (data->semaphores->print == SEM_FAILED)
 	{
 		write(1, "Something wrong with semaphore creation\n", 40);
 		return (1);
@@ -28,7 +28,7 @@ static int	create_stop_semaphore(t_data *data)
 {
 	sem_unlink("/stop");
 	data->semaphores->stop = sem_open("/stop", O_CREAT, 644, 1);
-	if (data->semaphores->stop == (sem_t *)-1)
+	if (data->semaphores->stop == SEM_FAILED)
 	{
 		write(1, "Something wrong with semaphore creation\n", 40);
 		return (1);
@@ -40,7 +40,7 @@ static int	create_etiquette_semaphore(t_data *data)
 {
 	sem_unlink("/etiquette");
 	data->semaphores->etiquette = sem_open("/etiquette", O_CREAT, 644, 1);
-	if (data->semaphores->etiquette == (sem_t *)-1)
+	if (data->semaphores->etiquette == SEM_FAILED)
 	{
 		write(1, "Something wrong with semaphore creation\n", 40);
 		return (1);

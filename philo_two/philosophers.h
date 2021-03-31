@@ -32,6 +32,7 @@ typedef struct	s_semaphores
 typedef struct	s_philo
 {
 	pthread_t		thread;
+	t_semaphores	*semaphores;
 	t_input			info;
 	time_ms			*start_of_simulation;
 	time_ms			time_of_death;
@@ -50,7 +51,14 @@ typedef struct	s_data
 	int				*number_of_dinners;
 }	t_data;
 
-int	get_input(int argc, char **argv, t_input *data);
-
+int		get_input(int argc, char **argv, t_input *data);
+int		create_philosophers(t_data *data);
+void	better_usleep(time_ms time_to_sleep);
+void	set_time_of_death(t_philo *philo);
+void	set_first_time_of_death(t_philo *philo);
+void	set_start_time(t_data *data);
+time_ms	get_current_time(void);
+int    create_satiety_thread(t_data *data);
+git
 
 #endif
