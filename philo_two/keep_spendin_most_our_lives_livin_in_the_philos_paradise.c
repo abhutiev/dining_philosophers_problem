@@ -4,7 +4,7 @@ static void	philo_takes_forks(t_philo *philo)
 {
 	if (philo->index % 2 == 0)
 	{
-		usleep(10);
+		usleep(100);
 	}
 	sem_wait(philo->semaphores->fork);
 	print_take_fork_message(philo, RIGHT_FORK);
@@ -40,7 +40,7 @@ static void	*memento_mori(t_philo *philo)
 			print_death_message(philo);
 			return (NULL);
 		}
-		better_usleep(100);
+		better_usleep(1);
 	}
 }
 

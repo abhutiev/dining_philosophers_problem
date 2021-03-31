@@ -5,8 +5,8 @@ void	print_death_message(t_philo *philo)
 	char *string;
 
 	string = ft_ulltoa(get_current_time() - *philo->start_of_simulation);
-	write(1, string, ft_strlen(string));
 	sem_wait(philo->semaphores->print);
+	write(1, string, ft_strlen(string));
 	write(1, " Philosopher ", 13);
 	string = ft_ulltoa((time_ms)philo->index);
 	write(1, string, ft_strlen(string));
@@ -19,8 +19,8 @@ void	print_take_fork_message(t_philo *philo, int flag)
 	char *string;
 
 	string = ft_ulltoa(get_current_time() - *philo->start_of_simulation);
-	write(1, string, ft_strlen(string));
 	sem_wait(philo->semaphores->print);
+	write(1, string, ft_strlen(string));
 	write(1, " Philosopher ", 13);
 	string = ft_ulltoa((time_ms)philo->index);
 	write(1, string, ft_strlen(string));
@@ -36,8 +36,8 @@ void	print_eating_message(t_philo *philo)
 	char *string;
 
 	string = ft_ulltoa(get_current_time() - *philo->start_of_simulation);
-	write(1, string, ft_strlen(string));
 	sem_wait(philo->semaphores->print);
+	write(1, string, ft_strlen(string));
 	write(1, " Philosopher ", 13);
 	string = ft_ulltoa((time_ms)philo->index);
 	write(1, string, ft_strlen(string));
@@ -50,8 +50,8 @@ void	print_sleeping_message(t_philo *philo)
 	char *string;
 
 	string = ft_ulltoa(get_current_time() - *philo->start_of_simulation);
-	write(1, string, ft_strlen(string));
 	sem_wait(philo->semaphores->print);
+	write(1, string, ft_strlen(string));
 	write(1, " Philosopher ", 13);
 	string = ft_ulltoa((time_ms)philo->index);
 	write(1, string, ft_strlen(string));
@@ -64,8 +64,8 @@ void	print_thinking_message(t_philo *philo)
 	char *string;
 
 	string = ft_ulltoa(get_current_time() - *philo->start_of_simulation);
-	write(1, string, ft_strlen(string));
 	sem_wait(philo->semaphores->print);
+	write(1, string, ft_strlen(string));
 	write(1, " Philosopher ", 13);
 	string = ft_ulltoa((time_ms)philo->index);
 	write(1, string, ft_strlen(string));

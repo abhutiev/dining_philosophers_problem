@@ -8,11 +8,6 @@ static void	philosopher_backpack(t_data *data, t_philo *philo, int i)
 	philo->start_of_simulation = data->start_of_simulation;
 	philo->number_of_dinners = data->number_of_dinners;
 	philo->number_of_dinners[i] = 0;
-	philo->index_left_fork = i;
-	if (i == 0)
-		philo->index_right_fork = data->input.number_of_philosophers - 1;
-	else
-		philo->index_right_fork = i - 1;
 }
 
 int	create_philosophers(t_data *data)

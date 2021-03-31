@@ -37,8 +37,6 @@ typedef struct	s_philo
 	t_input			info;
 	time_ms			*start_of_simulation;
 	time_ms			time_of_death;
-	int				index_left_fork;
-	int				index_right_fork;
 	int				index;
 	int				*number_of_dinners;
 }	t_philo;

@@ -2,9 +2,9 @@
 
 int	create_threads(t_data *data)
 {
+	set_start_time(data);
 	if (create_philosophers(data))
 		return (1);
-	set_start_time(data);
 	create_satiety_thread(data);
 	sem_post(data->semaphores->etiquette);
 	return (0);
@@ -19,6 +19,7 @@ int main(int argc, char **argv)
 	if (create_semaphores(&data))
 		return (0);
 	sem_wait(data.semaphores->etiquette);
+	sem_wait(data.semaphores->stop);
 	if (create_threads(&data))
 		return (0);
 	sem_wait(data.semaphores->stop);
