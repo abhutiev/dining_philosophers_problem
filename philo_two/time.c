@@ -12,6 +12,7 @@ void	set_start_time(t_data *data)
 {
 	struct timeval	time;
 
+	data->start_of_simulation = (time_ms *)malloc(sizeof(time_ms));
 	gettimeofday(&time, NULL);
 	*(data->start_of_simulation) = ((time_ms)(time.tv_sec * 1000 + time.tv_usec / 1000));
 }

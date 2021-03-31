@@ -3,8 +3,8 @@
 static int	create_forks_semaphore(t_data *data)
 {
 	sem_unlink("/forks");
-	data->semaphores->forks = sem_open("/forks", O_CREAT, 644, data->input.number_of_philosophers);
-	if (data->semaphores->forks == SEM_FAILED)
+	data->semaphores->fork = sem_open("/forks", O_CREAT, 644, data->input.number_of_philosophers);
+	if (data->semaphores->fork == SEM_FAILED)
 	{
 		write(1, "Something wrong with semaphore creation\n", 40);
 		return (1);
@@ -51,7 +51,7 @@ static int	create_etiquette_semaphore(t_data *data)
 int	create_semaphores(t_data *data)
 {
 	data->semaphores = (t_semaphores *)malloc(sizeof(t_semaphores));
-	if (create_forks_semaphore(&data))
+	if (create_forks_semaphore(data))
 		return (1);
 	if (create_print_semaphore(data))
 		return (1);

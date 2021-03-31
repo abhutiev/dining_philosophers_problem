@@ -6,7 +6,7 @@ int	create_threads(t_data *data)
 		return (1);
 	set_start_time(data);
 	create_satiety_thread(data);
-	pthread_mutex_unlock(data->mutex->etiquette);
+	sem_post(data->semaphores->etiquette);
 	return (0);
 }
 

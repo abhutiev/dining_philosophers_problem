@@ -4,8 +4,8 @@ static void	*satiety(t_data *data)
 {
 	int	i;
 
-	pthread_mutex_lock(data->mutex->etiquette);
-	pthread_mutex_unlock(data->mutex->etiquette);
+	sem_wait(data->semaphores->etiquette);
+	sem_post(data->semaphores->etiquette);
 	while (1)
 	{
 		for (i = 0; i < data->input.number_of_philosophers; i++) {

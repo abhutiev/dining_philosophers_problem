@@ -8,4 +8,8 @@ add_executable(philo_two philo_two.c
 		semaphores.c
 		time.c
 		satiety.c
-		philosophers_creation.c)
+		printing.c
+		philosophers_creation.c
+		keep_spendin_most_our_lives_livin_in_the_philos_paradise.c
+		utils.c
+		)

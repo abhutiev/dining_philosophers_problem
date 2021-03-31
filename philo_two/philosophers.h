@@ -4,6 +4,7 @@
 # include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
+# include <pthread.h>
 # include <sys/time.h>
 # include <semaphore.h>
 
@@ -53,12 +54,20 @@ typedef struct	s_data
 
 int		get_input(int argc, char **argv, t_input *data);
 int		create_philosophers(t_data *data);
+int		create_semaphores(t_data *data);
 void	better_usleep(time_ms time_to_sleep);
 void	set_time_of_death(t_philo *philo);
 void	set_first_time_of_death(t_philo *philo);
 void	set_start_time(t_data *data);
 time_ms	get_current_time(void);
-int    create_satiety_thread(t_data *data);
-git
+int		create_satiety_thread(t_data *data);
+char	*ft_ulltoa(time_ms n);
+void	print_death_message(t_philo *philo);
+void	print_take_fork_message(t_philo *philo, int flag);
+void	print_eating_message(t_philo *philo);
+void	print_sleeping_message(t_philo *philo);
+void	print_thinking_message(t_philo *philo);
+void	*philo_hussle(t_philo *philo);
+int		ft_strlen(char *s);
 
 #endif
