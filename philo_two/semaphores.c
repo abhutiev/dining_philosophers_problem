@@ -71,5 +71,7 @@ int	create_semaphores(t_data *data)
 		return (1);
 	if (create_etiquette_semaphore(data))
 		return (1);
+	if (create_waiter_semaphore(data))
+		return (1);
 	return (0);
 }

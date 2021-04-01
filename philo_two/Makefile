@@ -28,7 +28,7 @@ ${NAME}: ${OBJ} philosophers.h
 
 clean:
 	@rm ${OBJ}
-	@echo "Objective files are cleaned"
+	@echo "Object files are cleaned"
 
 test1:
 	./${NAME} 5 800 200 200
