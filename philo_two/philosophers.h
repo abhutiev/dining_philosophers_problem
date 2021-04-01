@@ -28,6 +28,7 @@ typedef struct	s_semaphores
 	sem_t			*print;
 	sem_t			*fork;
 	sem_t 			*etiquette;
+	sem_t 			*waiter;
 }	t_semaphores;
 
 typedef struct	s_philo
