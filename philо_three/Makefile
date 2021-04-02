@@ -1,12 +1,9 @@
-NAME =	philo_two
+NAME =	philo_three
 
-SRC =	philo_two.c \
+SRC =	philo_three.c \
 		get_input.c \
 		semaphores.c \
-		keep_spendin_most_our_lives_livin_in_the_philos_paradise.c \
-		philosophers_creation.c \
 		printing.c \
-		satiety.c \
 		time.c \
 		utils.c
 
